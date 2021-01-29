@@ -6,7 +6,6 @@
 [node name="PlayerStart" type="Node2D" groups=[
 "start",
 ]]
-position = Vector2( 416, 960 )
 script = ExtResource( 2 )
 
 [node name="EditorGizmo" type="Sprite" parent="."]
