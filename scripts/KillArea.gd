@@ -14,5 +14,6 @@ func _process(delta):
 
 
 func _on_KillZone_area_entered(area):
-	print("KILLLLLL")
-	pass # Replace with function body.
+	if area.owner.is_in_group("player"):
+		print("KILLLLLL")
+		
