@@ -1,6 +1,5 @@
 extends Node2D
 
-export(NodePath) var player_start_ref
 var player_start_pos : Vector2
 var player = null
 
@@ -8,6 +7,9 @@ func _ready():
 	var start_nodes = get_tree().get_nodes_in_group("start")
 	assert(start_nodes.size() == 1, "level is either missing or has too many start nodes")
 	player_start_pos = start_nodes[0].position
+	
+	var goal_nodes = get_tree().get_nodes_in_group("goal")
+	assert(goal_nodes.size() == 1, "level is either missing or has too many goal nodes")
 	
 	initialize()
 	
