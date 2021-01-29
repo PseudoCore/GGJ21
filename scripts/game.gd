@@ -15,7 +15,7 @@ func reset_level():
 
 func load_next_level():
 	current_level_id = current_level_id + 1
-	if level_paths.size() < current_level_id:
+	if level_paths.size() > current_level_id:
 		var path = level_paths[current_level_id]
 		call_deferred("_deferred_goto_scene", path)
 
