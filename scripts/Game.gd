@@ -1,18 +1,12 @@
-extends Node2D
+extends Node
 
 export(PackedScene) var player_class
-export(NodePath) var player_start_ref
 
-onready var player_start_pos = get_node(player_start_ref).position
-var player = null
+var current_scene = null
 
 func _ready():
-	initialize()
-	
-func initialize():
-	player = player_class.instance()
-	player.position = player_start_pos
-	add_child(player)
+	var root = get_tree().get_root()
+	current_scene = root.get_child(root.get_child_count() - 1)
 
-func reset():
-	player.position = player_start_pos
+func reset_level():
+	current_scene.reset_level()

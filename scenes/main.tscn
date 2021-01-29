@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/Game.gd" type="Script" id=2]
+[ext_resource path="res://scripts/level.gd" type="Script" id=2]
 [ext_resource path="res://assets/tile_sets/main_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://objects/obstacles/SawBlade.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/PlayerStart.tscn" type="PackedScene" id=5]
@@ -9,7 +8,6 @@
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
-player_class = ExtResource( 1 )
 player_start_ref = NodePath("PlayerStart")
 
 [node name="MainCamera" type="Camera2D" parent="."]

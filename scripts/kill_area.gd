@@ -15,5 +15,6 @@ func _process(delta):
 
 func _on_KillZone_area_entered(area):
 	if area.owner.is_in_group("player"):
+		Game.reset_level()
 		print("KILLLLLL")
 		

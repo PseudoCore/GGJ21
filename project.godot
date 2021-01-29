@@ -24,6 +24,10 @@ config/name="GGJ21"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Game="*res://objects/Game.tscn"
+
 [display]
 
 window/size/width=1920
