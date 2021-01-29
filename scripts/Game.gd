@@ -10,5 +10,5 @@ func _ready():
 
 func reset_level():
 	current_scene.call_deferred("reset_level")
-#	current_scene.reset_level()
+
 
