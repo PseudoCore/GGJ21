@@ -9,4 +9,6 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 func reset_level():
-	current_scene.reset_level()
+	current_scene.call_deferred("reset_level")
+#	current_scene.reset_level()
+
