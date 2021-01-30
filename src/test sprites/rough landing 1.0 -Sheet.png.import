@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rough landing 1.0 -Sheet.png-533bdcb340def27ea0e76a67975e142b.stex"
+path="res://.import/rough landing 1.0 -Sheet.png-95300fd3ce515bd501c486aaa4b803dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rough landing 1.0 -Sheet.png"
-dest_files=[ "res://.import/rough landing 1.0 -Sheet.png-533bdcb340def27ea0e76a67975e142b.stex" ]
+source_file="res://src/test sprites/rough landing 1.0 -Sheet.png"
+dest_files=[ "res://.import/rough landing 1.0 -Sheet.png-95300fd3ce515bd501c486aaa4b803dd.stex" ]
 
 [params]
 
