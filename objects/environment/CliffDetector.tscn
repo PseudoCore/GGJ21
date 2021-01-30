@@ -6,7 +6,7 @@
 [node name="CliffDetector" type="RayCast2D"]
 position = Vector2( 64, 48 )
 enabled = true
-cast_to = Vector2( 0, 24 )
+cast_to = Vector2( 0, 128 )
 script = ExtResource( 1 )
 cliff_detection_sound = ExtResource( 2 )
 
