@@ -75,9 +75,9 @@ func update_anim_state():
 #
 	if _anim_sprite.flip_h and _velocity.x > 0 or _velocity.x < 0:
 		_anim_sprite.flip_h = _velocity.x < 0
-#	if is_jumping && _velocity.y > 0:
-#		is_jumping = false
-#
-#	_anim_tree["parameters/conditions/IsJumping"] = is_jumping
-#	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not is_jumping
-#	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not is_jumping
+	if is_jumping && _velocity.y > 0:
+		is_jumping = false
+
+	_anim_tree["parameters/conditions/IsJumping"] = is_jumping
+	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not is_jumping
+	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not is_jumping
