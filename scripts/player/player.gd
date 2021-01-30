@@ -16,29 +16,35 @@ var gravity
 var is_grounded : bool
 
 onready var _velocity = Vector2(0, 0)
-onready var is_jumping = false
-onready var jump_duration = 0.5
-onready var groundRaycasts = $GroundRayCasts
+onready var _is_jumping = false
+onready var _jump_duration = 0.5
+onready var _ground_ray_casts = $GroundRayCasts
 onready var _anim_tree = $AnimationTree
 onready var _anim_sprite = $Sprite
 onready var _anim_state = _anim_tree.get("parameters/playback")
 
+const GlowStickProjectile = preload("res://objects/GlowStick.tscn")
+onready var throw_position = $ThrowPosition
+
 func _ready():
-	gravity = 2 * max_jump_height / pow(jump_duration, 2)
+	gravity = 2 * max_jump_height / pow(_jump_duration, 2)
 	min_jump_speed = sqrt(2 * gravity * min_jump_height)
 	max_jump_speed = sqrt(2 * gravity * max_jump_height)
 
-
 func _process(delta):
-	if(Input.is_action_just_pressed("dbp_escape")):
+	if (Input.is_action_just_pressed("dbp_escape")):
 		get_tree().quit()
+	if (Input.is_action_just_pressed("player_fire_1")):
+		var glow_stick = GlowStickProjectile.instance()
+		throw_position.add_child(glow_stick)
+		var mouse_position = get_viewport().get_mouse_position()
+		var dir = Vector2(mouse_position.x - position.x, mouse_position.y - position.y)
+		glow_stick.launch(dir.normalized())
 	update_anim_state()
-	
-	
+
 func _physics_process(delta):
 	_process_physic_input(delta)
 	_velocity = move_and_slide(_velocity, Vector2.UP, SLOPE_STOP)
-	
 	is_grounded = _check_is_grounded()
 
 func _process_physic_input(delta):
@@ -53,21 +59,19 @@ func _process_physic_input(delta):
 
 	if (Input.is_action_just_pressed("player_jump") && is_grounded):
 		_velocity.y -= max_jump_speed
-		is_jumping = true
+		_is_jumping = true
 
 	if (Input.is_action_just_released("player_jump") && _velocity.y <= -min_jump_speed):
 		_velocity.y = -min_jump_speed
-		is_jumping = true
-
+		_is_jumping = true
 
 func _check_is_grounded():
-	for raycast in groundRaycasts.get_children():
+	for raycast in _ground_ray_casts.get_children():
 		if raycast.is_colliding():
 			return true
 	# Not colliding
 	return false
-	
-	
+
 func update_anim_state():
 	var is_moving = _velocity.length_squared() >= anim_move_threshold * anim_move_threshold
 	_anim_tree["parameters/conditions/IsMoving"] = is_moving and is_grounded
@@ -75,9 +79,9 @@ func update_anim_state():
 #
 	if _anim_sprite.flip_h and _velocity.x > 0 or _velocity.x < 0:
 		_anim_sprite.flip_h = _velocity.x < 0
-	if is_jumping && _velocity.y > 0:
-		is_jumping = false
+	if _is_jumping && _velocity.y > 0:
+		_is_jumping = false
 
-	_anim_tree["parameters/conditions/IsJumping"] = is_jumping
-	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not is_jumping
-	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not is_jumping
+	_anim_tree["parameters/conditions/IsJumping"] = _is_jumping
+	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not _is_jumping
+	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not _is_jumping
