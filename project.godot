@@ -46,6 +46,7 @@ singletons=[ "res://git_api.gdnlib" ]
 [global]
 
 scale=false
+"Use Pixel Snap"=true
 
 [input]
 
@@ -77,4 +78,5 @@ dbp_escape={
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
