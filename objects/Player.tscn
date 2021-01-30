@@ -53,19 +53,19 @@ region = Rect2( 576, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 64, 128 )
+region = Rect2( 256, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 1 )
-region = Rect2( 128, 0, 64, 128 )
+region = Rect2( 64, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 64, 128 )
+region = Rect2( 128, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 64, 128 )
+region = Rect2( 192, 0, 64, 128 )
 
 [sub_resource type="SpriteFrames" id=17]
 animations = [ {
@@ -79,14 +79,14 @@ animations = [ {
 "name": "walk",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
-"loop": false,
-"name": "jump",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 16 ) ],
+"frames": [ SubResource( 13 ) ],
 "loop": true,
 "name": "falling",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": false,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -338,7 +338,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
 frames = SubResource( 17 )
-animation = "idle"
+animation = "falling"
 playing = true
 
 [node name="TriggerArea" type="Area2D" parent="."]
@@ -349,7 +349,7 @@ shape = SubResource( 18 )
 [node name="GroundRayCasts" type="Node2D" parent="."]
 
 [node name="Left" type="RayCast2D" parent="GroundRayCasts"]
-position = Vector2( -32, 40.334 )
+position = Vector2( -26.25, 40.834 )
 enabled = true
 cast_to = Vector2( 0, 24 )
 collision_mask = 3
@@ -361,7 +361,7 @@ cast_to = Vector2( 0, 16 )
 collision_mask = 3
 
 [node name="Right" type="RayCast2D" parent="GroundRayCasts"]
-position = Vector2( 32, 40 )
+position = Vector2( 26, 41 )
 enabled = true
 cast_to = Vector2( 0, 24 )
 collision_mask = 3
