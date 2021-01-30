@@ -17,6 +17,7 @@ func _process(delta):
 	duration -= delta
 	if (duration < 1):
 		particles.modulate.a = duration
-	elif (duration < 0):
-		queue_free()
 
+	if (duration < 0):
+		queue_free()
+		get_parent().remove_child(self)

@@ -38,12 +38,12 @@ shadow_enabled = true
 shadow_color = Color( 0.627451, 0.501961, 0.12549, 0.00784314 )
 shadow_gradient_length = 8.0
 
-[node name="Sprite" parent="." index="5"]
+[node name="CanvasModulate" parent="." index="5"]
+visible = false
+color = Color( 0, 0, 0, 1 )
+
+[node name="Sprite" parent="." index="6"]
 z_index = -1
 
 [node name="Temp Background Art" parent="Sprite" index="0"]
 position = Vector2( 1036.36, 542.267 )
-
-[node name="CanvasModulate" parent="." index="6"]
-visible = false
-color = Color( 0, 0, 0, 1 )
