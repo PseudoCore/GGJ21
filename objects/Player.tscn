@@ -164,6 +164,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [  ],
+"loop": true,
+"name": "landing_hard",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
 "loop": true,
 "name": "landing_soft",
@@ -473,7 +478,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
 frames = SubResource( 23 )
-animation = "idle"
+animation = "landing_hard"
 playing = true
 
 [node name="TriggerArea" type="Area2D" parent="."]
