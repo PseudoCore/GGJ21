@@ -26,4 +26,5 @@ texture = SubResource( 1 )
 [node name="Temp Background Art" type="Sprite" parent="Sprite"]
 position = Vector2( 960.5, 544 )
 scale = Vector2( 1.99896, 2.00369 )
+z_index = -2
 texture = ExtResource( 1 )

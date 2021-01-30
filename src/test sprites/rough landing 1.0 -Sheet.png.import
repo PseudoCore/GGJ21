@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Temp Background Art.png-f5b94bee4e240e190dfb6dc7c7666984.stex"
+path="res://.import/rough landing 1.0 -Sheet.png-95300fd3ce515bd501c486aaa4b803dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/sprites/Temp Background Art.png"
-dest_files=[ "res://.import/Temp Background Art.png-f5b94bee4e240e190dfb6dc7c7666984.stex" ]
+source_file="res://src/test sprites/rough landing 1.0 -Sheet.png"
+dest_files=[ "res://.import/rough landing 1.0 -Sheet.png-95300fd3ce515bd501c486aaa4b803dd.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
