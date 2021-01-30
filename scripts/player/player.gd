@@ -20,6 +20,7 @@ onready var is_jumping = false
 onready var jump_duration = 0.5
 onready var groundRaycasts = $GroundRayCasts
 onready var _anim_tree = $AnimationTree
+onready var _anim_sprite = $Sprite
 onready var _anim_state = _anim_tree.get("parameters/playback")
 
 func _ready():
@@ -71,10 +72,12 @@ func update_anim_state():
 	var is_moving = _velocity.length_squared() >= anim_move_threshold * anim_move_threshold
 	_anim_tree["parameters/conditions/IsMoving"] = is_moving and is_grounded
 	_anim_tree["parameters/conditions/IsNotMoving"] = not is_moving
-	
-	if is_jumping && _velocity.y > 0:
-		is_jumping = false
-	
-	_anim_tree["parameters/conditions/IsJumping"] = is_jumping
-	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not is_jumping
-	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not is_jumping
+#
+	if _anim_sprite.flip_h and _velocity.x > 0 or _velocity.x < 0:
+		_anim_sprite.flip_h = _velocity.x < 0
+#	if is_jumping && _velocity.y > 0:
+#		is_jumping = false
+#
+#	_anim_tree["parameters/conditions/IsJumping"] = is_jumping
+#	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not is_jumping
+#	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not is_jumping

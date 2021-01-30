@@ -58,4 +58,4 @@ states/moving/node = SubResource( 5 )
 states/moving/position = Vector2( 381, 230 )
 transitions = [ "idle", "jump", SubResource( 6 ), "jump", "falling", SubResource( 7 ), "jump", "landed", SubResource( 8 ), "idle", "falling", SubResource( 9 ), "falling", "landed", SubResource( 10 ), "landed", "idle", SubResource( 11 ), "idle", "moving", SubResource( 12 ), "moving", "idle", SubResource( 13 ), "moving", "jump", SubResource( 14 ), "moving", "falling", SubResource( 15 ) ]
 start_node = "idle"
-graph_offset = Vector2( 91, 6 )
+graph_offset = Vector2( 55, 31 )
