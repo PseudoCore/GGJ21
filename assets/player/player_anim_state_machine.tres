@@ -1,0 +1,60 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=16 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "falling"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "landed"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+advance_condition = "IsJumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+advance_condition = "IsFalling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+advance_condition = "IsFalling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+advance_condition = "IsNotFalling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+advance_condition = "IsMoving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+advance_condition = "IsNotMoving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+advance_condition = "IsJumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+advance_condition = "IsFalling"
+
+[resource]
+states/falling/node = SubResource( 1 )
+states/falling/position = Vector2( 675, 39 )
+states/idle/node = SubResource( 2 )
+states/idle/position = Vector2( 381, 122 )
+states/jump/node = SubResource( 3 )
+states/jump/position = Vector2( 675, 255 )
+states/landed/node = SubResource( 4 )
+states/landed/position = Vector2( 935, 128 )
+states/moving/node = SubResource( 5 )
+states/moving/position = Vector2( 381, 230 )
+transitions = [ "idle", "jump", SubResource( 6 ), "jump", "falling", SubResource( 7 ), "jump", "landed", SubResource( 8 ), "idle", "falling", SubResource( 9 ), "falling", "landed", SubResource( 10 ), "landed", "idle", SubResource( 11 ), "idle", "moving", SubResource( 12 ), "moving", "idle", SubResource( 13 ), "moving", "jump", SubResource( 14 ), "moving", "falling", SubResource( 15 ) ]
+start_node = "idle"
+graph_offset = Vector2( 93, 32 )
