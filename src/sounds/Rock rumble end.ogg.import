@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rock rumble end.ogg-fbdddfd41cdff9baacee0a1ddd89585d.oggstr"
+
+[deps]
+
+source_file="res://src/sounds/Rock rumble end.ogg"
+dest_files=[ "res://.import/Rock rumble end.ogg-fbdddfd41cdff9baacee0a1ddd89585d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

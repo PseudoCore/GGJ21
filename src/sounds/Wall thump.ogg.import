@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Wall thump.ogg-5eed9dfdb32a87d635f67e24134e58fc.oggstr"
+
+[deps]
+
+source_file="res://src/sounds/Wall thump.ogg"
+dest_files=[ "res://.import/Wall thump.ogg-5eed9dfdb32a87d635f67e24134e58fc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

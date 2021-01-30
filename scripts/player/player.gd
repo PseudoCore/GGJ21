@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal face_dir_changed(dir)
+
 export(float, 0, 1.0) var friction = 0.2
 export(float, 0, 1.0) var acceleration = 0.2
 export(float, 0, 1.0) var anim_move_threshold = 30
@@ -22,6 +24,8 @@ onready var _ground_ray_casts = $GroundRayCasts
 onready var _anim_tree = $AnimationTree
 onready var _anim_sprite = $Sprite
 onready var _anim_state = _anim_tree.get("parameters/playback")
+onready var face_dir = 1
+onready var _cliff_detector = $CliffDetector
 
 const GlowStickProjectile = preload("res://objects/GlowStick.tscn")
 onready var throw_node = $ThrowPosition
@@ -47,6 +51,7 @@ func _physics_process(delta):
 	_process_physic_input(delta)
 	_velocity = move_and_slide(_velocity, Vector2.UP, SLOPE_STOP)
 	is_grounded = _check_is_grounded()
+#	_cliff_detector.set_enabled(is_grounded)
 
 func _process_physic_input(delta):
 	var move_dir = Input.get_action_strength("player_move_right") - Input.get_action_strength("player_move_left")
@@ -78,6 +83,7 @@ func update_anim_state():
 	_anim_tree["parameters/conditions/IsMoving"] = is_moving and is_grounded
 	_anim_tree["parameters/conditions/IsNotMoving"] = not is_moving
 #
+	var old_flip_h = _anim_sprite.flip_h
 	if _anim_sprite.flip_h and _velocity.x > 0 or _velocity.x < 0:
 		_anim_sprite.flip_h = _velocity.x < 0
 		if _anim_sprite.flip_h:
@@ -87,6 +93,13 @@ func update_anim_state():
 
 	if _is_jumping && _velocity.y > 0:
 		_is_jumping = false
+
+	if old_flip_h != _anim_sprite.flip_h:
+		if _anim_sprite.flip_h:
+			face_dir = -1
+		else:
+			face_dir = 1
+		emit_signal("face_dir_changed", face_dir)
 
 	_anim_tree["parameters/conditions/IsJumping"] = _is_jumping
 	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not _is_jumping

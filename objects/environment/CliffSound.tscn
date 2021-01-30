@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/cliff_detector.gd" type="Script" id=1]
+[ext_resource path="res://src/sounds/Rock rumble start.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/sounds/Rock rumble end.ogg" type="AudioStream" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+
+[node name="CliffSound" type="AudioStreamPlayer2D"]
+max_distance = 800.0
+attenuation = 3.0
+script = ExtResource( 1 )
+delay_per_tile = 0.7
+start_sound = ExtResource( 2 )
+end_sound = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="debug_sprite" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
+[connection signal="finished" from="." to="." method="_on_CliffSound_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
