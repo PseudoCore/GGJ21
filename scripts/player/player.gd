@@ -24,7 +24,8 @@ onready var _anim_sprite = $Sprite
 onready var _anim_state = _anim_tree.get("parameters/playback")
 
 const GlowStickProjectile = preload("res://objects/GlowStick.tscn")
-onready var throw_position = $ThrowPosition
+onready var throw_node = $ThrowPosition
+onready var throw_position_x = throw_node.position.x
 
 func _ready():
 	gravity = 2 * max_jump_height / pow(_jump_duration, 2)
@@ -36,7 +37,7 @@ func _process(delta):
 		get_tree().quit()
 	if (Input.is_action_just_pressed("player_fire_1")):
 		var glow_stick = GlowStickProjectile.instance()
-		throw_position.add_child(glow_stick)
+		throw_node.add_child(glow_stick)
 		var mouse_position = get_viewport().get_mouse_position()
 		var dir = Vector2(mouse_position.x - position.x, mouse_position.y - position.y)
 		glow_stick.launch(dir.normalized())
@@ -79,6 +80,11 @@ func update_anim_state():
 #
 	if _anim_sprite.flip_h and _velocity.x > 0 or _velocity.x < 0:
 		_anim_sprite.flip_h = _velocity.x < 0
+		if _anim_sprite.flip_h:
+			throw_node.position.x = -throw_position_x
+		else:
+			throw_node.position.x = throw_position_x
+
 	if _is_jumping && _velocity.y > 0:
 		_is_jumping = false
 
