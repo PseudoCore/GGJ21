@@ -3,7 +3,7 @@ extends KinematicBody2D
 export(float, 0, 1.0) var friction = 0.2
 export(float, 0, 1.0) var acceleration = 0.25
 
-#var SLOPE_STOP = 2 * Globals.TILE_SIZE
+var SLOPE_STOP = 2 * Globals.TILE_SIZE
 
 var move_speed = 5 * Globals.TILE_SIZE
 var min_jump_height = 0.8 * Globals.TILE_SIZE
@@ -11,7 +11,7 @@ var max_jump_height = 4 * Globals.TILE_SIZE
 var min_jump_speed
 var max_jump_speed
 var gravity
-#var is_grounded
+var is_grounded
 
 onready var _velocity = Vector2(0, 0)
 onready var is_jumping = false
@@ -30,8 +30,7 @@ func _process(delta):
 func _physics_process(delta):
 	_process_physic_input(delta)
 
-	_velocity = move_and_slide(_velocity, Vector2.UP)
-	#_velocity = move_and_slide(_velocity, Vector2.UP, SLOPE_STOP)
+	_velocity = move_and_slide(_velocity, Vector2.UP, SLOPE_STOP)
 	
 	#is_grounded = _check_is_grounded()
 
