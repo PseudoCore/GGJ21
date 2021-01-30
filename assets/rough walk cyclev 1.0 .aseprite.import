@@ -2,12 +2,12 @@
 
 importer="aseprite.wizard.plugin"
 type="SpriteFrames"
-path="res://.import/rough walk cyclev 1.0 .aseprite-12315d5e7d30bccb34942701adf3efed.res"
+path="res://.import/rough walk cyclev 1.0 .aseprite-6e3e9a6e5c6df47d4a128559f3d96371.res"
 
 [deps]
 
-source_file="res://src/test sprites/rough walk cyclev 1.0 .aseprite"
-dest_files=[ "res://.import/rough walk cyclev 1.0 .aseprite-12315d5e7d30bccb34942701adf3efed.res" ]
+source_file="res://assets/rough walk cyclev 1.0 .aseprite"
+dest_files=[ "res://.import/rough walk cyclev 1.0 .aseprite-6e3e9a6e5c6df47d4a128559f3d96371.res" ]
 
 [params]
 

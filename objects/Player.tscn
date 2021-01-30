@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://assets/rough walk cyclev 1.0 .aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://scripts/player/player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -22,6 +23,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
+frames = ExtResource( 1 )
+frame = 7
 
 [node name="TriggerArea" type="Area2D" parent="."]
 
