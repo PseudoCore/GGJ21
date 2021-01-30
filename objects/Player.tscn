@@ -22,7 +22,6 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
 z_index = 64
 texture = ExtResource( 1 )
 region_enabled = true
@@ -36,9 +35,9 @@ shape = SubResource( 2 )
 [node name="GroundRayCasts" type="Node2D" parent="."]
 
 [node name="Left" type="RayCast2D" parent="GroundRayCasts"]
-position = Vector2( -30, 40 )
+position = Vector2( -32, 40.334 )
 enabled = true
-cast_to = Vector2( 0, 16 )
+cast_to = Vector2( 0, 24 )
 collision_mask = 3
 
 [node name="Center" type="RayCast2D" parent="GroundRayCasts"]
@@ -48,7 +47,7 @@ cast_to = Vector2( 0, 16 )
 collision_mask = 3
 
 [node name="Right" type="RayCast2D" parent="GroundRayCasts"]
-position = Vector2( 30, 40 )
+position = Vector2( 32, 40 )
 enabled = true
-cast_to = Vector2( 0, 16 )
+cast_to = Vector2( 0, 24 )
 collision_mask = 3
