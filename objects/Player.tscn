@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://src/test sprites/rough walk cyclev 1.0 .png" type="Texture" id=1]
 [ext_resource path="res://scripts/player/player.gd" type="Script" id=2]
@@ -11,41 +11,6 @@ height = 64.0
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=51]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 768, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=52]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 832, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=53]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 896, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=54]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 960, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=55]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=56]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1088, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=57]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 192, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
@@ -87,91 +52,81 @@ region = Rect2( 512, 0, 64, 128 )
 atlas = ExtResource( 1 )
 region = Rect2( 576, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=43]
+[sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 640, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=44]
+[sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 704, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=45]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 768, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=46]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 832, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=47]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 896, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=48]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 960, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=49]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1088, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 0, 64, 128 )
-
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 128, 0, 64, 128 )
+region = Rect2( 768, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 64, 128 )
+region = Rect2( 832, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 384, 0, 64, 128 )
+region = Rect2( 896, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 512, 0, 64, 128 )
+region = Rect2( 960, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 3 )
+region = Rect2( 1024, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1088, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1024, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 384, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 512, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 3 )
 region = Rect2( 768, 0, 64, 128 )
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=27]
 animations = [ {
 "frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "landing_hard",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
-"loop": true,
-"name": "landing_soft",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
@@ -179,22 +134,22 @@ animations = [ {
 "name": "walk",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
+"frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "falling",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": false,
 "name": "jump",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=24]
+[sub_resource type="CapsuleShape2D" id=28]
 radius = 32.0
 height = 64.0
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=29]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -246,7 +201,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=30]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
 tracks/0/interp = 1
@@ -284,7 +239,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=31]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
@@ -323,7 +278,7 @@ tracks/2/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=58]
+[sub_resource type="Animation" id=32]
 resource_name = "landing_soft"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
@@ -350,7 +305,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=33]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
 tracks/0/interp = 1
@@ -400,68 +355,56 @@ tracks/3/keys = {
 "values": [ 1.3 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=34]
 animation = "falling"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=35]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=36]
 animation = "jump"
 
-[sub_resource type="AnimationNodeAnimation" id=59]
-animation = "landing_soft"
-
-[sub_resource type="AnimationNodeAnimation" id=32]
+[sub_resource type="AnimationNodeAnimation" id=37]
 animation = "moving"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
 advance_condition = "IsMoving"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=34]
-advance_condition = "IsNotMoving"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=35]
-advance_condition = "IsFalling"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=37]
-advance_condition = "IsJumping"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=38]
-advance_condition = "IsFalling"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=39]
-advance_condition = "IsJumping"
+advance_condition = "IsNotMoving"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=40]
 advance_condition = "IsFalling"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
 advance_condition = "IsNotFalling"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=61]
-switch_mode = 2
-auto_advance = true
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+advance_condition = "IsJumping"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=62]
-advance_condition = "IsMoving"
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+advance_condition = "IsFalling"
 
-[sub_resource type="AnimationNodeStateMachine" id=41]
-states/falling/node = SubResource( 29 )
-states/falling/position = Vector2( 356, 344 )
-states/idle/node = SubResource( 30 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+advance_condition = "IsJumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+advance_condition = "IsFalling"
+
+[sub_resource type="AnimationNodeStateMachine" id=46]
+states/falling/node = SubResource( 34 )
+states/falling/position = Vector2( 310, 189 )
+states/idle/node = SubResource( 35 )
 states/idle/position = Vector2( 412, 73 )
-states/jump/node = SubResource( 31 )
-states/jump/position = Vector2( 774, 294 )
-states/landing_soft/node = SubResource( 59 )
-states/landing_soft/position = Vector2( 181, 183 )
-states/moving/node = SubResource( 32 )
+states/jump/node = SubResource( 36 )
+states/jump/position = Vector2( 552, 189 )
+states/moving/node = SubResource( 37 )
 states/moving/position = Vector2( 625, 73 )
-transitions = [ "idle", "moving", SubResource( 33 ), "moving", "idle", SubResource( 34 ), "idle", "falling", SubResource( 35 ), "idle", "jump", SubResource( 37 ), "jump", "falling", SubResource( 38 ), "moving", "jump", SubResource( 39 ), "moving", "falling", SubResource( 40 ), "falling", "landing_soft", SubResource( 60 ), "landing_soft", "idle", SubResource( 61 ), "landing_soft", "moving", SubResource( 62 ) ]
+transitions = [ "idle", "moving", SubResource( 38 ), "moving", "idle", SubResource( 39 ), "idle", "falling", SubResource( 40 ), "falling", "idle", SubResource( 41 ), "idle", "jump", SubResource( 42 ), "jump", "falling", SubResource( 43 ), "moving", "jump", SubResource( 44 ), "moving", "falling", SubResource( 45 ) ]
 start_node = "idle"
 graph_offset = Vector2( 10, 36 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=42]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=47]
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -477,14 +420,14 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
-frames = SubResource( 23 )
-animation = "landing_hard"
+frames = SubResource( 27 )
+animation = "idle"
 playing = true
 
 [node name="TriggerArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
-shape = SubResource( 24 )
+shape = SubResource( 28 )
 
 [node name="GroundRayCasts" type="Node2D" parent="."]
 
@@ -510,17 +453,17 @@ collision_mask = 3
 position = Vector2( 24, -32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/falling = SubResource( 25 )
-anims/idle = SubResource( 26 )
-anims/jump = SubResource( 27 )
-anims/landing_soft = SubResource( 58 )
-anims/moving = SubResource( 28 )
+anims/falling = SubResource( 29 )
+anims/idle = SubResource( 30 )
+anims/jump = SubResource( 31 )
+anims/landing_soft = SubResource( 32 )
+anims/moving = SubResource( 33 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 41 )
+tree_root = SubResource( 46 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 42 )
+parameters/playback = SubResource( 47 )
 parameters/conditions/IsFalling = false
 parameters/conditions/IsJumping = false
 parameters/conditions/IsMoving = false
