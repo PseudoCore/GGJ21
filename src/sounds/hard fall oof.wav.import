@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hard fall oof.wav-f97b6c83ae3e9abb9eba966fae38ea7b.sample"
+
+[deps]
+
+source_file="res://src/sounds/hard fall oof.wav"
+dest_files=[ "res://.import/hard fall oof.wav-f97b6c83ae3e9abb9eba966fae38ea7b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

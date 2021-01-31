@@ -17,9 +17,6 @@ position = Vector2( 160, 320 )
 [node name="Exit" parent="." index="3" instance=ExtResource( 2 )]
 position = Vector2( 1608, 736 )
 
-[node name="CanvasModulate" parent="." index="4"]
-visible = false
-
 [node name="KillZone" parent="." index="6" instance=ExtResource( 4 )]
 position = Vector2( 928, 949.394 )
 scale = Vector2( 5, 4 )
