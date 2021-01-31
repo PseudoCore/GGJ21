@@ -47,4 +47,4 @@ color = Color( 0.184314, 0.184314, 0.184314, 1 )
 z_index = -1
 
 [node name="Temp Background Art" parent="Sprite" index="0"]
-position = Vector2( 1036.36, 542.267 )
+position = Vector2( 960.274, 543.602 )

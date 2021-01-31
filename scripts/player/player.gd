@@ -27,6 +27,7 @@ onready var _anim_state = _anim_tree.get("parameters/playback")
 onready var face_dir = 1
 onready var _cliff_detector = $CliffDetector
 
+signal glow_stick_count_changed(count)
 const GlowStickProjectile = preload("res://objects/GlowStick.tscn")
 onready var throw_node = $ThrowPosition
 onready var throw_position_x = throw_node.position.x
@@ -39,13 +40,20 @@ func _ready():
 func _process(delta):
 	if (Input.is_action_just_pressed("dbp_escape")):
 		get_tree().quit()
-	if (Input.is_action_just_pressed("player_fire_1")):
+	if (Input.is_action_just_pressed("player_fire_1") && PlayerStats.glow_stick_count > 0):
 		var glow_stick = GlowStickProjectile.instance()
 		throw_node.add_child(glow_stick)
-		var mouse_position = get_viewport().get_mouse_position()
-		var dir = Vector2(mouse_position.x - position.x, mouse_position.y - position.y)
-		glow_stick.launch(dir.normalized())
+		glow_stick.long_throw()
+		PlayerStats.decrease_glow_stick_count()
 		_anim_state.travel("throw")
+	if (Input.is_action_just_pressed("player_fire_2") && PlayerStats.glow_stick_count > 0):
+		var glow_stick = GlowStickProjectile.instance()
+		throw_node.add_child(glow_stick)
+		glow_stick.short_throw()
+		PlayerStats.decrease_glow_stick_count()
+		_anim_state.travel("throw")
+	if (Input.is_action_just_pressed("cheat_0")):
+		PlayerStats.set_glow_stick_count(15)
 	update_anim_state()
 
 func _physics_process(delta):
