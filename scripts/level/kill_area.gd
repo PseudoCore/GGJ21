@@ -1,6 +1,11 @@
 extends Area2D
 
 export(float) var spin_rps = 1
+export(AudioStream) var killAudio
+export(float) var killDelay = 4
+
+onready var audioStream = $AudioStreamPlayer2D
+onready var timer = $Timer
 
 var _spin_speed = spin_rps * PI * 2
 
@@ -15,6 +20,10 @@ func _process(delta):
 
 func _on_KillZone_area_entered(area):
 	if area.owner.is_in_group("player"):
-		Game.reset_level()
+		audioStream.stream = killAudio
+		audioStream.play()
+		timer.start(killDelay)
 		print("KILLLLLL")
-		
+
+func _on_Timer_timeout():
+	Game.reset_level()

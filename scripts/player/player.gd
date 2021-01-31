@@ -28,7 +28,7 @@ onready var face_dir = 1
 onready var _cliff_detector = $CliffDetector
 
 signal glow_stick_count_changed(count)
-const GlowStickProjectile = preload("res://objects/GlowStick.tscn")
+const GlowStickProjectile = preload("res://objects/glow_stick/GlowStick.tscn")
 onready var throw_node = $ThrowPosition
 onready var throw_position_x = throw_node.position.x
 
