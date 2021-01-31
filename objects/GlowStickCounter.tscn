@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://src/ui_sprites/label_background.png" type="Texture" id=1]
 [ext_resource path="res://src/ui_sprites/glow_stick_icon.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/counter.tres" type="Theme" id=3]
 
@@ -8,7 +7,6 @@
 margin_right = 260.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 260, 70 )
-texture = ExtResource( 1 )
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
@@ -22,8 +20,9 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -128.0
+margin_left = -127.5
 margin_top = -64.0
+margin_right = 0.5
 margin_bottom = 64.0
 texture = ExtResource( 2 )
 __meta__ = {

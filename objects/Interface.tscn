@@ -15,9 +15,9 @@ __meta__ = {
 [node name="GlowStickCounter" parent="." instance=ExtResource( 1 )]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -284.0
-margin_top = 24.0
-margin_right = -24.0
-margin_bottom = 94.0
+margin_left = -318.648
+margin_top = 55.8198
+margin_right = -58.6482
+margin_bottom = 125.82
 script = ExtResource( 3 )
 [connection signal="glow_stick_count_changed" from="." to="GlowStickCounter" method="_on_Interface_glow_stick_count_changed"]
