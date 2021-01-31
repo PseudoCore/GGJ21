@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 Game="*res://objects/Game.tscn"
 Globals="*res://scripts/globals/globals.gd"
 PlayerStats="*res://scripts/globals/player_stats.gd"
+BackgroundMusic="*res://objects/Background Music.tscn"
 
 [display]
 
