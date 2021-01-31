@@ -9,7 +9,7 @@ export(float, 0, 1.0) var anim_move_threshold = 30
 var SLOPE_STOP = 2 * Globals.TILE_SIZE
 var SLOPE_JUMP_SPEED_THRESHOLD = 1.5 * Globals.TILE_SIZE
 
-var move_speed = 5 * Globals.TILE_SIZE
+var move_speed = 2.3 * Globals.TILE_SIZE
 var min_jump_height = 0.75 * Globals.TILE_SIZE
 var max_jump_height = 4 * Globals.TILE_SIZE
 var min_jump_speed
@@ -45,6 +45,7 @@ func _process(delta):
 		var mouse_position = get_viewport().get_mouse_position()
 		var dir = Vector2(mouse_position.x - position.x, mouse_position.y - position.y)
 		glow_stick.launch(dir.normalized())
+		_anim_state.travel("throw")
 	update_anim_state()
 
 func _physics_process(delta):

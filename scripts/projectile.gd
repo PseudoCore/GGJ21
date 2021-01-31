@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 export(float) var throw_force = 640
-export(float) var duration = 5
+export(float) var duration = 10
 
 onready var particles = $GlowParticles
 
