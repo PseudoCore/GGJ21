@@ -13,7 +13,7 @@ export(Vector2) var jump_charge_str_up = Vector2(1, 3)
 export(float) var air_floatiness = 4
 export(float) var air_time = 0.8
 export(float) var hard_land_threshold = 196
-export(float) var hard_land_stun_time = 2
+export(float) var hard_land_stun_time = 1.1
 
 var SLOPE_STOP = 2 * Globals.TILE_SIZE
 var SLOPE_JUMP_SPEED_THRESHOLD = 1.5 * Globals.TILE_SIZE
@@ -80,6 +80,7 @@ func _physics_process(delta):
 		if fall_dist >= hard_land_threshold:
 			stun_timer = hard_land_stun_time
 			_velocity = Vector2.ZERO
+			_anim_state.travel("landing_hard")
 	
 	_process_physic_input(delta)
 	_velocity = move_and_slide(_velocity, Vector2.UP, SLOPE_STOP)
@@ -159,7 +160,7 @@ func update_anim_state():
 			face_dir = 1
 		emit_signal("face_dir_changed", face_dir)
 
-#	_anim_tree["parameters/conditions/IsChargingJump"] = is_charging_jump
+	_anim_tree["parameters/conditions/IsChargingJump"] = is_charging_jump
 	_anim_tree["parameters/conditions/IsJumping"] = _is_jumping
 	_anim_tree["parameters/conditions/IsFalling"] = not is_grounded and not _is_jumping
 	_anim_tree["parameters/conditions/IsNotFalling"] = is_grounded and not _is_jumping

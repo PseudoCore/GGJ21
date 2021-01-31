@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://src/test sprites/rough walk cyclev 1.0 .png" type="Texture" id=1]
 [ext_resource path="res://scripts/player/player.gd" type="Script" id=2]
@@ -13,40 +13,35 @@ height = 64.0
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=86]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 768, 0, 64, 128 )
+region = Rect2( 896, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=87]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1024, 0, 64, 128 )
+
+[sub_resource type="AtlasTexture" id=88]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 1088, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 832, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=5]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 896, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 960, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 64, 128 )
-
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 1088, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 3 )
-region = Rect2( 192, 0, 64, 128 )
+region = Rect2( 1024, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -57,16 +52,6 @@ region = Rect2( 64, 0, 64, 128 )
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 320, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 320, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 128, 0, 64, 128 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -193,21 +178,6 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 1664, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=41]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1728, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=42]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1792, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 640, 0, 64, 128 )
-
 [sub_resource type="AtlasTexture" id=44]
 flags = 4
 atlas = ExtResource( 3 )
@@ -223,26 +193,6 @@ flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 832, 0, 64, 128 )
 
-[sub_resource type="AtlasTexture" id=47]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 896, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=48]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 960, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=49]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1024, 0, 64, 128 )
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 3 )
-region = Rect2( 1088, 0, 64, 128 )
-
 [sub_resource type="SpriteFrames" id=51]
 animations = [ {
 "frames": [ SubResource( 2 ) ],
@@ -250,35 +200,40 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
-"loop": true,
+"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
+"loop": false,
+"name": "jump_charging",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 8 ), SubResource( 7 ) ],
+"loop": false,
 "name": "landing_soft",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
+"loop": false,
 "name": "throw",
-"speed": 5.0
+"speed": 10.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": false,
 "name": "jump",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "walk",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
-"loop": true,
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
+"loop": false,
 "name": "landing_hard",
-"speed": 5.0
+"speed": 10.0
 }, {
-"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
+"frames": [ SubResource( 44 ), SubResource( 45 ), SubResource( 46 ) ],
 "loop": true,
 "name": "falling",
-"speed": 5.0
+"speed": 7.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=52]
@@ -300,42 +255,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "falling" ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:speed_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=54]
 tracks/0/type = "value"
@@ -349,30 +268,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "idle" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
 }
 
 [sub_resource type="Animation" id=55]
@@ -389,29 +284,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "jump" ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:speed_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
+
+[sub_resource type="Animation" id=89]
+resource_name = "jump_charging"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
+"update": 1,
+"values": [ "jump_charging" ]
 }
 
 [sub_resource type="Animation" id=56]
@@ -429,21 +315,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "landing_hard" ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14 ]
-}
 
 [sub_resource type="Animation" id=57]
-length = 0.6
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
 tracks/0/interp = 1
@@ -454,19 +328,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "falling" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 4, 5, 6, 7 ]
+"values": [ "landing_soft" ]
 }
 
 [sub_resource type="Animation" id=58]
@@ -481,42 +343,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "walk" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:speed_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.3 ]
 }
 
 [sub_resource type="Animation" id=59]
@@ -534,18 +360,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "throw" ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 1, 1 ]
-}
 
 [sub_resource type="AnimationNodeAnimation" id=60]
 animation = "falling"
@@ -555,6 +369,9 @@ animation = "idle"
 
 [sub_resource type="AnimationNodeAnimation" id=62]
 animation = "jump"
+
+[sub_resource type="AnimationNodeAnimation" id=90]
+animation = "jump_charging"
 
 [sub_resource type="AnimationNodeAnimation" id=63]
 animation = "landing_hard"
@@ -577,14 +394,8 @@ advance_condition = "IsNotMoving"
 [sub_resource type="AnimationNodeStateMachineTransition" id=69]
 advance_condition = "IsFalling"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=70]
-advance_condition = "IsJumping"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=71]
 advance_condition = "IsFalling"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=72]
-advance_condition = "IsJumping"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=73]
 advance_condition = "IsFalling"
@@ -599,7 +410,6 @@ auto_advance = true
 advance_condition = "IsMoving"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=76]
-advance_condition = "IsNotFalling"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=77]
 switch_mode = 2
@@ -619,24 +429,38 @@ auto_advance = true
 switch_mode = 2
 auto_advance = true
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
+advance_condition = "IsNotFalling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=91]
+advance_condition = "IsChargingJump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=92]
+advance_condition = "IsJumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=93]
+advance_condition = "IsChargingJump"
+
 [sub_resource type="AnimationNodeStateMachine" id=83]
 states/falling/node = SubResource( 60 )
-states/falling/position = Vector2( 359, 372 )
+states/falling/position = Vector2( 318, 468 )
 states/idle/node = SubResource( 61 )
 states/idle/position = Vector2( 602, 229 )
 states/jump/node = SubResource( 62 )
-states/jump/position = Vector2( 969, 354 )
+states/jump/position = Vector2( 1046, 468 )
+states/jump_charging/node = SubResource( 90 )
+states/jump_charging/position = Vector2( 1046, 338 )
 states/landing_hard/node = SubResource( 63 )
-states/landing_hard/position = Vector2( 101, 201 )
+states/landing_hard/position = Vector2( 73, 218 )
 states/landing_soft/node = SubResource( 64 )
-states/landing_soft/position = Vector2( 341, 246 )
+states/landing_soft/position = Vector2( 318, 305 )
 states/moving/node = SubResource( 65 )
-states/moving/position = Vector2( 625, 73 )
+states/moving/position = Vector2( 602, 72 )
 states/throw/node = SubResource( 66 )
-states/throw/position = Vector2( 969, 229 )
-transitions = [ "idle", "moving", SubResource( 67 ), "moving", "idle", SubResource( 68 ), "idle", "falling", SubResource( 69 ), "idle", "jump", SubResource( 70 ), "jump", "falling", SubResource( 71 ), "moving", "jump", SubResource( 72 ), "moving", "falling", SubResource( 73 ), "landing_soft", "idle", SubResource( 74 ), "landing_soft", "moving", SubResource( 75 ), "falling", "landing_hard", SubResource( 76 ), "landing_hard", "idle", SubResource( 77 ), "landing_hard", "moving", SubResource( 78 ), "moving", "throw", SubResource( 79 ), "throw", "falling", SubResource( 80 ), "idle", "throw", SubResource( 81 ), "throw", "idle", SubResource( 82 ) ]
+states/throw/position = Vector2( 1046, 229 )
+transitions = [ "idle", "moving", SubResource( 67 ), "moving", "idle", SubResource( 68 ), "idle", "falling", SubResource( 69 ), "jump", "falling", SubResource( 71 ), "moving", "falling", SubResource( 73 ), "landing_soft", "idle", SubResource( 74 ), "landing_soft", "moving", SubResource( 75 ), "falling", "landing_hard", SubResource( 76 ), "landing_hard", "idle", SubResource( 77 ), "landing_hard", "moving", SubResource( 78 ), "moving", "throw", SubResource( 79 ), "throw", "falling", SubResource( 80 ), "idle", "throw", SubResource( 81 ), "throw", "idle", SubResource( 82 ), "falling", "landing_soft", SubResource( 85 ), "idle", "jump_charging", SubResource( 91 ), "jump_charging", "jump", SubResource( 92 ), "moving", "jump_charging", SubResource( 93 ) ]
 start_node = "idle"
-graph_offset = Vector2( 10, 36 )
+graph_offset = Vector2( -4, 95 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=84]
 
@@ -655,7 +479,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
 frames = SubResource( 51 )
-animation = "idle"
+animation = "landing_hard"
+frame = 12
 playing = true
 
 [node name="TriggerArea" type="Area2D" parent="."]
@@ -690,6 +515,7 @@ position = Vector2( 24, -32 )
 anims/falling = SubResource( 53 )
 anims/idle = SubResource( 54 )
 anims/jump = SubResource( 55 )
+anims/jump_charging = SubResource( 89 )
 anims/landing_hard = SubResource( 56 )
 anims/landing_soft = SubResource( 57 )
 anims/moving = SubResource( 58 )
@@ -700,6 +526,7 @@ tree_root = SubResource( 83 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 84 )
+parameters/conditions/IsChargingJump = false
 parameters/conditions/IsFalling = false
 parameters/conditions/IsJumping = false
 parameters/conditions/IsMoving = false
