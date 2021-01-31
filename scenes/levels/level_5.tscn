@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/core_node/PlayerStart.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/core_node/Exit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/blank_scene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/obstacles/KillZone.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/environment/WaterDropplet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/sounds/scream.wav" type="AudioStream" id=6]
+
+[node name="World" instance=ExtResource( 3 )]
+
+[node name="TileMap" parent="." index="1"]
+tile_data = PoolIntArray( 655360, 536870924, 0, 655361, 536870924, 0, 655362, 536870924, 0, 655363, 536870924, 0, 655364, 536870924, 0, 655365, 536870924, 0, 655366, 536870924, 0, 655367, 536870924, 0, 655369, 536870924, 0, 655370, 536870923, 0, 720909, 536870917, 0, 720910, 5, 0, 786445, 536870918, 0, 851978, 536870914, 0, 851979, 5, 0, 917509, 536870914, 0, 917510, 5, 0, 917514, 536870918, 0, 917515, 6, 0, 983044, 536870914, 0, 983045, 536870922, 0, 983046, 6, 0, 983050, 536870918, 0, 983051, 6, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 536870922, 0, 1048581, 536870922, 0, 1048582, 6, 0, 1048586, 536870918, 0, 1048587, 6, 0 )
+
+[node name="PlayerStart" parent="." index="2" instance=ExtResource( 1 )]
+position = Vector2( 38, 964 )
+
+[node name="Exit" parent="." index="3" instance=ExtResource( 2 )]
+position = Vector2( 1608, 736 )
+
+[node name="CanvasModulate" parent="." index="4"]
+visible = false
+
+[node name="Temp Background Art" parent="Sprite" index="0"]
+visible = false
+
+[node name="KillZone" parent="." index="6" instance=ExtResource( 4 )]
+position = Vector2( 543.276, 1047.01 )
+scale = Vector2( 3, 1 )
+killAudio = ExtResource( 6 )
+
+[node name="WaterDropplet" parent="." index="7" instance=ExtResource( 5 )]
