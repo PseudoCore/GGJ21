@@ -9,7 +9,7 @@
 max_distance = 800.0
 attenuation = 3.0
 script = ExtResource( 1 )
-delay_per_tile = 0.7
+delay_per_tile = 0.4
 start_sound = ExtResource( 2 )
 end_sound = ExtResource( 3 )
 
