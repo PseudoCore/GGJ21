@@ -23,7 +23,6 @@ func _on_KillZone_area_entered(area):
 		audioStream.stream = killAudio
 		audioStream.play()
 		timer.start(killDelay)
-		print("KILLLLLL")
 
 func _on_Timer_timeout():
 	Game.reset_level()
