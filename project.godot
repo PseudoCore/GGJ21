@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GGJ21"
-run/main_scene="res://scenes/levels/level_4.tscn"
+run/main_scene="res://scenes/levels/level_1.tscn"
 config/icon="res://icon.png"
 
 [autoload]

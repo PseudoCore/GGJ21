@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/sprites/flash_light.png" type="Texture" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/flash_light.png-f5545f4efa2008dfc3ccb011f334ad6e.stex"
+
+[node name="Light" type="Node2D"]
+position = Vector2( 843.148, 136.759 )
+rotation = 0.00872665
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.0784314 )
+texture = SubResource( 1 )
+offset = Vector2( 0, 450 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, 450 )
+texture_scale = 4.0
+energy = 0.5
+range_z_min = -2048
+range_z_max = 2048
+range_item_cull_mask = -2147483647
+shadow_enabled = true
+shadow_color = Color( 0.627451, 0.501961, 0.12549, 0.00784314 )
