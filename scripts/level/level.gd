@@ -17,7 +17,8 @@ func initialize():
 	player = Game.player_class.instance()
 	player.position = player_start_pos
 	PlayerStats.set_glow_stick_count(10)
-	add_child(player)
+
+	get_node("PlayerCanvasLayer").add_child(player)
 
 func reset_level():
 	if player:
