@@ -1,9 +1,11 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://src/test sprites/rough walk cyclev 1.0 .png" type="Texture" id=1]
 [ext_resource path="res://scripts/player/player.gd" type="Script" id=2]
 [ext_resource path="res://src/test sprites/rough landing 1.0 -Sheet.png" type="Texture" id=3]
 [ext_resource path="res://objects/environment/CliffDetector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/sounds/hard fall oof.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/sounds/Wall thump.ogg" type="AudioStream" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 30.0
@@ -315,6 +317,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "landing_hard" ]
 }
+tracks/1/type = "audio"
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+} ],
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=48]
 length = 0.3
@@ -329,6 +345,20 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "landing_soft" ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 7 )
+} ],
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=49]
@@ -481,7 +511,8 @@ shape = SubResource( 1 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 z_index = 64
 frames = SubResource( 41 )
-animation = "idle"
+animation = "landing_soft"
+frame = 2
 playing = true
 
 [node name="TriggerArea" type="Area2D" parent="."]
@@ -535,4 +566,6 @@ parameters/conditions/IsNotFalling = true
 parameters/conditions/IsNotMoving = true
 
 [node name="CliffDetector" parent="." instance=ExtResource( 4 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="face_dir_changed" from="." to="CliffDetector" method="_on_Player_face_dir_changed"]
